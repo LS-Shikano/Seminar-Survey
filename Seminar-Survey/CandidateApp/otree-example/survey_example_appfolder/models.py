@@ -28,7 +28,7 @@ class Constants(BaseConstants):
     # Counters for question assignments
     competence_counters = [0, 0, 0, 0]  # One counter for each group
     trust_counters = [0, 0, 0, 0]  # One counter for each group
-    max_assignments = 125  # Max people per group per question type
+    max_assignments = 126  # Max people per group per question type
 
 class Subsession(BaseSubsession):
 
