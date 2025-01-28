@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+   // Time stamp
+   var time = new Date();
+   var time = time.toISOString();
+   document.getElementById("time").value = time;  
+</script>
+{% endblock %}
+
+{% block title %}
+Seminar Survey - University Konstanz
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2> "Willkommen & Welcome" </h2>
+    <hr>
+
+    <input id="time" type="hidden" name="time_start"/>
+
+    <hr>
+    <p> Es freut mich sehr Sie begrüßen zu dürfen. Herzlichen Dank für Ihre Teilnahme an dieser Befragung.</p>
+
+    <p>Bitte klicken Sie nun auf den "Weiter/Next"-Button, um Ihr Einverständnis mit der Teilnahme an dieser Umfrage zu geben und die Umfrage zu beginnen.</p>
+    
+    <button class="otree-btn-next btn btn-primary next-button otree-next-button">
+        Weiter
+    </button>
+</div>
+{% endblock %}
