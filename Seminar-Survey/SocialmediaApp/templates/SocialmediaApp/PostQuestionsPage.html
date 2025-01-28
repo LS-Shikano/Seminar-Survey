@@ -3,7 +3,7 @@
 
 
 {% block title %}
-Post-Question
+
 {% endblock %}
 
 {% block global_styles %}
@@ -22,7 +22,7 @@ Post-Question
         </div>
 
         <div class="community-content">
-            <span> This is the example of the community note, which you could see in some tweets during the survey.</span>
+            <span> Dies ist ein Beispiel einer 'Commnity Note', welche Sie während des Experiments gesehen haben.</span>
         </div>
 
         <div class="community-footer">
@@ -40,16 +40,16 @@ Post-Question
 
     <div style="margin-bottom: 32px;"></div>
 
-    <p>Was it useful to read the note?</p>
-    <input id="postYes" type="radio" name="post_quest" value="1" /> Yes
+    <p>Finden Sie diese 'Community Note' hilfreich?</p>
+    <input id="postYes" type="radio" name="post_quest" value="1" /> Ja
     <br>
-    <input id="postNo" type="radio" name="post_quest" value="2" /> No
+    <input id="postNo" type="radio" name="post_quest" value="2" /> Nein
     {{ formfield_errors 'post_quest' }}
 
     <div style="margin-bottom: 24px;"></div>
 
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
-        Next
+        Nächste Seite
     </button>
 
 {% endblock %}
