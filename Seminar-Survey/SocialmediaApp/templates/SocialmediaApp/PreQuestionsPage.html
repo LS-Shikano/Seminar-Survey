@@ -88,30 +88,30 @@ Pre-Questions
     
     <div class="mediasource">
         <!-- First question -->
-        <p>What are your preferred media sources?</p>
-        <input id="socialMedia" type="checkbox" name="mediasource_social" class="mediasource-checkbox"> Social Media
+        <p>Was sind Ihre bevorzugten Medienquellen?</p>
+        <input id="socialMedia" type="checkbox" name="mediasource_social" class="mediasource-checkbox"> Soziale Medien
         <br>
-        <input id="onlineMedia" type="checkbox" name="mediasource_online" class="mediasource-checkbox"> Online Media
+        <input id="onlineMedia" type="checkbox" name="mediasource_online" class="mediasource-checkbox"> Onlinemedien
         <br>
-        <input id="tv" type="checkbox" name="mediasource_tv" class="mediasource-checkbox"> Television
+        <input id="tv" type="checkbox" name="mediasource_tv" class="mediasource-checkbox"> Fernsehen
         <br>
         <input id="radio" type="checkbox" name="mediasource_radio" class="mediasource-checkbox"> Radio
         <br>
-        <input id="printedMedia" type="checkbox" name="mediasource_printed" class="mediasource-checkbox"> Printed Media
+        <input id="printedMedia" type="checkbox" name="mediasource_printed" class="mediasource-checkbox"> Printmedien
         <br>
-        <input id="mediaNone" type="radio" name="mediasource_none" value="1" > None of the above
+        <input id="mediaNone" type="radio" name="mediasource_none" value="1" > Keine der oben genannten
     </div>
 
     <div style="margin-bottom: 32px;"></div>
 
     <div class="socialmedia">
         <!-- Second question -->
-        <p>Do you use <b>social media?</b></p>
-        <input id="socialYes" type="radio" name="social_media" value="1" onclick="popout()" /> Yes
+        <p>Nutzen Sie <b>Soziale Medien?</b></p>
+        <input id="socialYes" type="radio" name="social_media" value="1" onclick="popout()" /> Ja
         <br>
-        <input id="socialNo" type="radio" name="social_media" value="2" onclick="popout()" /> No
+        <input id="socialNo" type="radio" name="social_media" value="2" onclick="popout()" /> Nein
         <br>
-        <input id="socialNA" type="radio" name="social_media" value="3" onclick="popout()" /> No Answer
+        <input id="socialNA" type="radio" name="social_media" value="3" onclick="popout()" /> Keine Angabe
 
         {{ formfield_errors 'social_media' }}
 
@@ -119,7 +119,7 @@ Pre-Questions
 
         <!-- Second question - popout section -->
         <div id="divYes" style="display: none">
-            <p>Which social media platforms do you use <b>regularly?</b></p>
+            <p>Welche Soziale Medien Plattform nutzen Sie <b>regelmäßig?</b></p>
             <input id="facebook" type="checkbox" name="socialmedia_facebook" class="socialmedia-checkbox" /> Facebook
             <br>
             <input id="twitter" type="checkbox" name="socialmedia_twitter" class="socialmedia-checkbox" /> X / Twitter
@@ -132,7 +132,7 @@ Pre-Questions
             <br>
             <input id="xing" type="checkbox" name="socialmedia_xing" class="socialmedia-checkbox" /> Xing
             <br>
-            <input id="socialNone" type="radio" name="socialmedia_none" value="1" /> None of the above
+            <input id="socialNone" type="radio" name="socialmedia_none" value="1" /> Keine der oben genannten
         </div>
     </div>
 
