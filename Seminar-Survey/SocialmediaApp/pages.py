@@ -34,7 +34,7 @@ class PreQuestionsPage(Page):
     form_model = Player
     form_fields = ['mediasource_social', 'mediasource_online', 'mediasource_printed', 'mediasource_tv', 'mediasource_radio', 'mediasource_none',
                    'social_media',
-                   'socialmedia_facebook', 'socialmedia_twitter', 'socialmedia_instagram', 'socialmedia_tiktok', 'socialmedia_linkedin', 'socialmedia_xing', 'socialmedia_none']
+                   'socialmedia_facebook', 'socialmedia_twitter', 'socialmedia_other', 'socialmedia_instagram', 'socialmedia_tiktok', 'socialmedia_linkedin', 'mediasource_other', 'socialmedia_xing', 'socialmedia_none']
 
 
 class IntroPage(Page):
