@@ -50,7 +50,8 @@ class Player(BasePlayer):
     
     #Post-Questions
     post_quest = models.IntegerField(label='End Question', blank=False)
-    
+    post_quest_2 = models.IntegerField(label='End Question', blank=False)
+    post_quest_3 = models.IntegerField(label='End Question', blank=False)
     
     # TweetsPage
     tweet_index = models.IntegerField(initial=0)
