@@ -147,7 +147,7 @@ class ContentPage(Page):
 
 class PostQuestionsPage(Page):
     form_model = Player
-    form_fields = ['post_quest']
+    form_fields = ['post_quest', 'post_quest_2', 'post_quest_3']
 
 
 ## Page sequence ##
