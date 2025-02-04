@@ -106,11 +106,11 @@ class Player(BasePlayer):
 
     political_stance_trade = models.IntegerField(
         label="<b>Wie würden Sie Ihre politische Haltung zu Handelsabkommen, einschließlich Mercosur, beschreiben?</b>",
-        choices=[(1, 'Sehr Progressiv'),
+        choices=[(1, 'Sehr progressiv'),
             (2, 'Progressiv'),
             (3, 'Moderat'),
             (4, 'Konservativ'),
-            (5, 'Sehr Konservativ')],
+            (5, 'Sehr konservativ')],
         widget=widgets.RadioSelect,        
     )
 
@@ -201,7 +201,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelectHorizontal
     )
     pre_last_vote = models.IntegerField(
-        label="•  Bei der letzten nationalen Wahl gewählt:",
+        label="•  Bei der letzten Bundestagswahl gewählt:",
         choices=[
             [1, "Ja"],
             [2, "Nein"],
@@ -236,7 +236,7 @@ class Player(BasePlayer):
 
     select_proceed = models.BooleanField(
     blank=False,
-    label="<b>Um zu bestätigen das Sie den Text gelesen haben, wählen Sie bitte 'Nein' aus.</b>", #to be changed not a fan of this type of question 
+    label="<b>Um zu bestätigen, dass Sie den Text gelesen haben, wählen Sie bitte 'Nein' aus.</b>", #to be changed not a fan of this type of question 
     choices=[
         [True, "Ja"],
         [False, "Nein"]
@@ -339,7 +339,7 @@ class Player(BasePlayer):
         widget=widgets.RadioSelectHorizontal
     )
     post_next_vote = models.IntegerField(
-        label="• Bei der nächsten nationalen Wahl wählen: <i>(1: Sehr Unwahrscheinlich - 10: Sehr wahrscheinlich)</i>",
+        label="• Bei der nächsten Bundestagswahl wählen: <i>(1: Sehr Unwahrscheinlich - 10: Sehr wahrscheinlich)</i>",
         choices=[(1, '1'),
             (2, '2'),
             (3, '3'),
@@ -443,7 +443,7 @@ class Player(BasePlayer):
 ## Manipulation Checks 
     overall_tone = models.StringField(
         label="<b>Wie war der allgemeine Ton der Beschreibung, die Sie über das Mercosur-Abkommen gelesen haben?</b>",
-        choices=[(1,"Überwiegend postiiv"), 
+        choices=[(1,"Überwiegend positiv"), 
                  (2,"Neutral"), 
                  (3,"Überwiegend negativ"), 
                  (0,"Unklar")],

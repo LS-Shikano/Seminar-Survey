@@ -38,7 +38,7 @@ class PreTreatment(Page):
 
     def before_next_page(self):
         # List of available treatments
-        treatments = ['positive_pronostic', 
+        treatments = ['positive_prognostic', 
                       'positive_diagnostic', 
                       'negativ_prognostic', 
                       'negative_diagnostic']
