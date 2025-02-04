@@ -6,7 +6,7 @@ SESSION_CONFIGS = [
         name='survey_example',
         display_name='survey_example',
         num_demo_participants=10,
-        app_sequence=['survey_example_appfolder'],
+        app_sequence=['MobilizationApp',"SocialmediaApp","survey_example_appfolder"],
     ),
 ]
 
