@@ -38,7 +38,7 @@ class Page1(Page):
         print(f"Current Picture: {assigned_picture}")
 
         # Construct the image path dynamically
-        image_path = f"/static/Group_{self.player.group_assignment}/P_{assigned_picture}.png"
+        image_path = f"/static/images/Group_{self.player.group_assignment}/P_{assigned_picture}.png"
 
         #convert assigned pictures to string for further use
         assigned_picture = str(assigned_picture)
@@ -144,7 +144,7 @@ class Page2(Page):
         assigned_femininity_picture = self.player.picture_assignment_femininity
 
         # Construct the image path dynamically
-        image_path_fem =  f"/static/Group_{self.player.group_assignment_fem}/P_{assigned_femininity_picture}.png"
+        image_path_fem =  f"/static/images/Group_{self.player.group_assignment_fem}/P_{assigned_femininity_picture}.png"
 
         # Send the variables to the HTML page
         return {

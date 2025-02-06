@@ -5,7 +5,7 @@ SESSION_CONFIGS = [
         name='fake_news',
         display_name='Fake News',
         num_demo_participants=10,
-        app_sequence=['SocialmediaApp','MobilizationApp'],
+        app_sequence=['SocialmediaApp', 'MobilizationApp', 'CandidateApp'],
     ),
 ]
 

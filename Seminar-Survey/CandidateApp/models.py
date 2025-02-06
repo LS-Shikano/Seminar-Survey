@@ -46,7 +46,7 @@ class Subsession(BaseSubsession):
 
         if 1 <= self.round_number <= 10:
             # if it is the first round 
-            print(f"Creating round: {self.round_number}")
+            (f"Creating round: {self.round_number}")
             if self.round_number == 1:
                 #define number of groups and create empty dict
                 num_groups = 4
