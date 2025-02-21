@@ -12,16 +12,13 @@ import custom_python.get_config as cf
 import custom_python.quota_calc as quota
 
 doc = """
-EndApp contains additional questions and an end page which redirects (to
-Respondi).
+EndApp contains additional questions and an end page which redirects.
 """
-
 
 class C(BaseConstants):
     NAME_IN_URL = "EndApp"
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
-
 
 class Subsession(BaseSubsession):
     pass
@@ -30,23 +27,11 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pass
 
-
-# must match with the name attribute in the TimeTrackedPage subclass body
-time_tracked_pages = [
-    "eyestop",
-    "recall",
-    "partyop",
-    "politicianop",
-    "politicianchar",
-    "politiciancomp",
-    "politicianinteg",
-    "polop",
+pages = [
     "edu",
-    "demo",
     "income",
     "end",
 ]
-
 
 # PLAYER / VARIABLES
 class Player(BasePlayer):
@@ -74,7 +59,6 @@ class Player(BasePlayer):
         label=cf.income_net_income_lb,
         blank=True,
     )
-
 
 # PAGES
 ### Education ###

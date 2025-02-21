@@ -9,7 +9,6 @@ SESSION_CONFIG_DEFAULTS = dict(
     screen_out_redirect_link="https://survey.maximiles.com/screenout?p=89808_546de779&m=",
     quota_redirect_link="https://survey.maximiles.com/quotasfull?p=89808_d7bfcc1a&m=",
     quota_screenout=True,
-    use_browser_bots=False,
 )
 
 SESSION_CONFIGS = [
@@ -17,7 +16,7 @@ SESSION_CONFIGS = [
         name='seminar_survey',
         display_name='Seminar Survey',
         num_demo_participants=10,
-        app_sequence=['StartApp', 'SocialmediaApp', 'MobilizationApp', 'CandidateApp'],
+        app_sequence=['StartApp', 'SocialmediaApp', 'MobilizationApp', 'CandidateApp', 'EndApp'],
     ),
 ]
 
@@ -25,7 +24,6 @@ SESSION_CONFIGS = [
 # in SESSION_CONFIGS, except those that explicitly override it.
 # the session config can be accessed from methods in your apps as self.session.config,
 # e.g. self.session.config['participation_fee']
-
 
 PARTICIPANT_FIELDS = [
     "b_group",

@@ -65,7 +65,7 @@ class Subsession(BaseSubsession):
 
                     #randomly select a pciture ID form the dict 
                     random_picture = random.choice(available_pictures)
-                    p.picture_assignment = random_picture 
+                    p.picture_assignment = int(random_picture) 
 
                     #remove selected pic from the player dict 
                     available_pictures.remove(random_picture)
@@ -87,7 +87,7 @@ class Subsession(BaseSubsession):
                     available_pictures = p.get_player_pictures().get("available_pictures", [])
                     if available_pictures:  # Ensure there are pictures left
                         random_picture = random.choice(available_pictures)
-                        p.picture_assignment = random_picture
+                        p.picture_assignment = int(random_picture)
 
                         #remove the selected picture and update the player's available pictures
                         available_pictures.remove(random_picture)
@@ -126,7 +126,7 @@ class Subsession(BaseSubsession):
 
                     #randomly assign femininity pictures
                     random_femininity_picture = random.choice(available_femininity_pictures)
-                    p.picture_assignment_femininity = random_femininity_picture
+                    p.picture_assignment_femininity = int(random_femininity_picture)
 
                     available_femininity_pictures.remove(random_femininity_picture)
                     p.set_player_pictures({"available_femininity_pictures": available_femininity_pictures})
@@ -147,7 +147,7 @@ class Subsession(BaseSubsession):
                     available_femininity_pictures = p.get_player_pictures().get("available_femininity_pictures", [])
                     if available_femininity_pictures:  
                         random_femininity_picture = random.choice(available_femininity_pictures)
-                        p.picture_assignment_femininity = random_femininity_picture 
+                        p.picture_assignment_femininity = int(random_femininity_picture) 
 
                         #remove the selected picture and update the player's available pictures
                         available_femininity_pictures.remove(random_femininity_picture)

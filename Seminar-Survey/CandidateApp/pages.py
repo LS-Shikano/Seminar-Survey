@@ -12,7 +12,7 @@ class Welcome(Page):
 
 
 class Page1(Page):
-    form_model = 'player'
+    form_model = Player
     form_fields = ['comp_trust', 'picture_assignment']
 
     def vars_for_template(self):
@@ -124,7 +124,7 @@ class Transition(Page):
             return self.round_number == 11
 
 class Page2(Page):
-    form_model = 'player'
+    form_model = Player
     form_fields = ["popout_question_femininity", "picture_assignment_femininity"]
 
     def vars_for_template(self):
