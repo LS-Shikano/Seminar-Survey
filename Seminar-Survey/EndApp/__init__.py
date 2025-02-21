@@ -1,13 +1,24 @@
-from otree.api import *
-
+from otree.api import (
+    BaseConstants,
+    Page,
+    BaseSubsession,
+    BaseGroup,
+    BasePlayer,
+    models,
+    Page,
+    widgets,
+)
+import custom_python.get_config as cf
+import custom_python.quota_calc as quota
 
 doc = """
-Your app description
+EndApp contains additional questions and an end page which redirects (to
+Respondi).
 """
 
 
 class C(BaseConstants):
-    NAME_IN_URL = 'EndApp'
+    NAME_IN_URL = "EndApp"
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
 
@@ -20,21 +31,101 @@ class Group(BaseGroup):
     pass
 
 
+# must match with the name attribute in the TimeTrackedPage subclass body
+time_tracked_pages = [
+    "eyestop",
+    "recall",
+    "partyop",
+    "politicianop",
+    "politicianchar",
+    "politiciancomp",
+    "politicianinteg",
+    "polop",
+    "edu",
+    "demo",
+    "income",
+    "end",
+]
+
+
+# PLAYER / VARIABLES
 class Player(BasePlayer):
-    pass
+    
+    ### Education ###
+    edu_general_education = models.IntegerField(
+        widget=widgets.RadioSelect,
+        choices=cf.edu_general_education_ch,
+        label=cf.edu_general_education_lb,
+        blank=True,
+    )
+    edu_general_education_open = models.StringField(label="", blank=True)
+    edu_vocational_training = models.IntegerField(
+        widget=widgets.RadioSelect,
+        choices=cf.edu_vocational_training_ch,
+        label=cf.edu_vocational_training_lb,
+        blank=True,
+    )
+    edu_vocational_training_open = models.StringField(label="", blank=True)
+
+    ### Income ###
+    income_net_income = models.IntegerField(
+        widget=widgets.RadioSelect,
+        choices=cf.income_net_income_ch,
+        label=cf.income_net_income_lb,
+        blank=True,
+    )
 
 
 # PAGES
-class MyPage(Page):
-    pass
+### Education ###
+class Education(Page):
+    name = "edu"
+    form_model = Player
+
+    form_fields = [
+        "edu_general_education",
+        "edu_general_education_open",
+        "edu_vocational_training",
+        "edu_vocational_training_open",
+    ]
 
 
-class ResultsWaitPage(WaitPage):
-    pass
+### Income ###
+class Income(Page):
+    name = "income"
+    form_model = Player
+    form_fields = ["income_net_income"]
 
 
-class Results(Page):
-    pass
+### End_Page ###
+class End(Page):
+    name = "end"
+    form_model = Player
+
+    @classmethod
+    def before_next_page(cls, player, timeout_happened):
+        # Having finished the survey, the player is counted towards the quota
+        quota.counting(player)
 
 
-page_sequence = [MyPage, ResultsWaitPage, Results]
+class Redirect(Page):
+    form_model = Player
+    @staticmethod
+    def is_displayed(player):
+        return player.session.config["quota_screenout"]
+
+    @staticmethod
+    def js_vars(player):
+        return dict(
+            # getting redirect link from settings.py
+            link=player.session.config["normal_redirect_link"]
+            + str(player.participant.label),
+        )
+
+
+page_sequence = [
+    Education,
+    Income,
+    End,
+    Redirect,
+]

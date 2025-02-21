@@ -1,0 +1,38 @@
+{
+    "degree": {
+        "label": "Studieren Sie im Bachelor, Master oder promivieren Sie an der Universität Konstanz?",
+        "choices": [
+            "Bachelor Studium",
+            "Master Studium",
+            "Promotion",
+            "keines der oben genannten",
+            "Keine Angabe"
+        ]
+    },
+    "department": {
+        "label": "Welchen Studiengang belegen Sie?"
+    },
+    "fachsemester": {
+        "label": "In welchem Fachsemester studieren Sie?",
+        "choices": [
+            "1. Fachsemester",
+            "2. Fachsemester",
+            "3. Fachsemester",
+            "4. Fachsemester",
+            "5. Fachsemester",
+            "6. Fachsemester",
+            "7. Fachsemester",
+            "höheres Fachsemester",
+            "Keine Angabe"
+
+        ]
+    },
+    "study": {
+        "label": "Haben Sie schon einmal an einer experimentellen Studie teilgenommen?",
+        "choices": [
+            "Ja",
+            "Nein",
+            "Keine Angabe"
+        ]
+    }
+}
