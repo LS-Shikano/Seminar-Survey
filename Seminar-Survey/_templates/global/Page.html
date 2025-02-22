@@ -6,3 +6,9 @@
 
 {% block global_scripts  %}
 {% endblock %}
+
+{{ block title }}
+    {{ include 'global/Logo.html' }}
+    {% block custom_title %}
+    {% endblock %}
+{{ endblock }}
