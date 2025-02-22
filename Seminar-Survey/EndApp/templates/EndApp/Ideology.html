@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{{ block content }}
+{{ include 'global/Logo.html' }}
+
+
+<div id="content">
+    {{ formfield "left_right_ideology" }}
+</div>
+
+<!-- next button -->
+{{ include 'global/Next_Page_Button.html' }}
+
+<script>
+    window.addEventListener('load', finish_loading, { once: true });
+</script>
+
+{{ endblock }}

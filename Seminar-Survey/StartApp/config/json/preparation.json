@@ -52,15 +52,5 @@
             "Thüringen",
             "Weiß nicht"
         ]
-    },
-    "study_discovery": {
-        "label": "Wie sind Sie auf diese Studie aufmerksam geworden?",
-        "choices": [
-            "Freunde/Bekannte",
-            "Bericht im Südkurier",
-            "Flyer",
-            "Ich bin zufällig hier",
-            "Anderer Grund, nämlich:"
-        ]
     }
 }

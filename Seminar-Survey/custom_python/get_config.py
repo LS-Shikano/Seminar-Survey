@@ -5,14 +5,6 @@ from custom_python.general_helpers import make_field, get_raw
 #### StartApp ####
 #####################
 
-### Students ###
-path = "StartApp/config/json/students.json"
-
-# adding * to the label of this field because its mandatory
-
-prep_study_lb, prep_study_ch = make_field(path, "study", choices=True)
-prep_study_lb = prep_study_lb + "*"
-
 ### Preparation ###
 path = "StartApp/config/json/preparation.json"
 
@@ -34,11 +26,6 @@ prep_participation_lb, prep_participation_ch = make_field(
 prep_federal_state_lb, prep_federal_state_ch = make_field(
     path, "federal_state", choices=True
 )
-
-prep_study_discovery_lb, prep_study_discovery_ch = make_field(
-    path, "study_discovery", choices=True
-)
-prep_study_discovery_lb = prep_study_discovery_lb + "*"
 
 ### Age Groups ###
 
@@ -64,6 +51,7 @@ screen_out_eligible = screen_outs["eligible"]
 ###################
 #### EndApp ####
 ###################
+
 
 ### Education ###
 path = "EndApp/config/json/education.json"

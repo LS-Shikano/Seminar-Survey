@@ -28,6 +28,7 @@ class Group(BaseGroup):
     pass
 
 pages = [
+    "ideology"
     "edu",
     "income",
     "end",
@@ -36,6 +37,24 @@ pages = [
 # PLAYER / VARIABLES
 class Player(BasePlayer):
     
+    ### Ideology ###
+    left_right_ideology =  models.IntegerField(
+        label="Man spricht in der Politik immer wieder von \"links\" und \"rechts\". Wo würden Sie sich auf einer Skala einordnen, bei der 1 \"links\" bedeutet und 11 \"rechts\"?",
+        choices=[(1, '1'),
+            (2, '2'),
+            (3, '3'),
+            (4, '4'),
+            (5, '5'),
+            (6, '6'),
+            (7, '7'),
+            (8, '8'),
+            (9, '9'),
+            (10, '10'),
+            (11, '11')],
+        widget=widgets.RadioSelectHorizontal,
+        blank=True,
+    )
+
     ### Education ###
     edu_general_education = models.IntegerField(
         widget=widgets.RadioSelect,
@@ -61,6 +80,16 @@ class Player(BasePlayer):
     )
 
 # PAGES
+
+### Ideology ###
+class Ideology (Page):
+    name = "ideology"
+    form_model = Player
+
+    form_fields = [
+        "left_right_ideology",
+    ]
+
 ### Education ###
 class Education(Page):
     name = "edu"
@@ -108,6 +137,7 @@ class Redirect(Page):
 
 
 page_sequence = [
+    Ideology,
     Education,
     Income,
     End,

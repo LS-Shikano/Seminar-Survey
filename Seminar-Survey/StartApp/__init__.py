@@ -11,11 +11,11 @@ import custom_python.get_config as cf
 import custom_python.quota_calc as quota
 
 doc = """
-Start_Quest contains a welcome page and a preparation questionnaire.
+StartApp contains a welcome page and a preparation questionnaire.
 """
 
 class C(BaseConstants):
-    NAME_IN_URL = "Start_Quest"
+    NAME_IN_URL = "StartApp"
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
 
@@ -44,7 +44,7 @@ class Player(BasePlayer):
         choices=cf.prep_gender_ch,
         widget=widgets.RadioSelect,
     )
-    prep_age = models.IntegerField(min=1900, max=2022, label=cf.prep_age_lb)
+    prep_age = models.IntegerField(min=1900, max=2025, label=cf.prep_age_lb)
 
     prep_eligible = models.IntegerField(
         label=cf.prep_eligible_lb,
@@ -65,15 +65,6 @@ class Player(BasePlayer):
         choices=cf.prep_federal_state_ch,
         widget=widgets.RadioSelect,
     )
-
-    prep_study_discovery = models.IntegerField(
-        label=cf.prep_study_discovery_lb,
-        choices=cf.prep_study_discovery_ch,
-        widget=widgets.RadioSelect,
-    )
-
-    prep_study_discovery_open = models.StringField(label="", blank=True)
-  
 
     browser_type = models.StringField(blank=True)
     device_type = models.StringField(blank=True)
@@ -121,5 +112,21 @@ class Screening(Page):
         )
         player.participant.eligible = player.prep_eligible
         player.participant.gender = player.prep_gender
+    
 
-page_sequence = [Welcome, Screening]
+class Survey_Prep(Page):
+    name = "prep"
+
+    @classmethod
+    def js_vars(cls, player) -> dict:
+        label = str(player.participant.label)
+        if player.participant.screen_out:
+            link = player.session.config["screen_out_redirect_link"] + label
+        elif player.participant.quota:
+            link = player.session.config["quota_redirect_link"] + label
+        else:
+            link = ""
+        return super().js_vars(player) | dict(link=link)
+    
+    
+page_sequence = [Welcome, Screening, Survey_Prep]
