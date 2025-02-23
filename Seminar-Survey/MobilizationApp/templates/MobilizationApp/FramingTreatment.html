@@ -13,19 +13,22 @@ Seminar Survey - University Konstanz
 
 {% block content %}
 <div class="container">
+    <h2> "Treatment" </h2> <br>
 
     <div class="mb-3 bg-light border pt-2 pb-2 px-2">
-        {% if treatment == 'positive_diagnostic' %}
-            <p> Vor Mercosur führten hohe Zölle und fragmentierte Handelspolitiken zu eingeschränkter wirtschaftlicher Integration zwischen den Mitgliedsstaaten. Dies verursachte Ineffizienzen im Handel, begrenzten Marktzugang und verpasste Chancen für gemeinsames Wirtschaftswachstum. Das Abkommen soll diese Hindernisse beseitigen und eine größere, wettbewerbsfähige Wirtschaftsregion schaffen.</p>
-
-        {% elif treatment == 'positive_prognostic' %}
-            <p> Das Mercosur-Abkommen bietet einen Rahmen für eine verstärkte wirtschaftliche Zusammenarbeit. Durch die Unterstützung kleinerer Nationen und die Förderung fairer Handelsrichtlinien kann Mercosur lokalen Industrien helfen, sich zu entwickeln. Diese Zusammenarbeit kann zu nachhaltigem Wachstum und verbesserten Lebensstandards in der gesamten Region führen.</p>
-
-        {% elif treatment == 'negative_diagnostic' %}
-            <p> Der Wegfall von Zöllen im Rahmen des Mercosur-Abkommens hat bestehende Handelsungleichgewichte verschärft. Kleinere Mitgliedsstaaten haben Schwierigkeiten, mit größeren Volkswirtschaften zu konkurrieren, was zum Rückgang lokaler Industrien und zum Verlust von Arbeitsplätzen geführt hat. Diese wirtschaftlichen Ungleichheiten bergen das Risiko langfristiger Abhängigkeiten innerhalb der Region.</p>
-
-        {% elif treatment == 'negative_prognostic' %}
-            <p> Um Handelsungleichgewichte, die durch Mercosur entstehen, zu bewältigen, müssen die beteiligten Akteure Schutzmaßnahmen für kleinere Mitgliedsstaaten einführen. Dazu könnten Programme zur Anpassung an den Handel, Investitionen in lokale Industrien und Mechanismen zur Überwachung und Korrektur von Handelsungleichgewichten gehören.</p>
+        {% if ass_treatment == 'positive_diagnostic' %}
+            <p> Vor Mercosur waren die wirtschaftlichen Rahmenbedingungen ineffizient, was zu begrenztem Marktzugang und verpassten Chancen für Wachstum führte. Dies belastete insbesondere lokale Unternehmen und hemmte wirtschaftliche Kooperationen. Das Abkommen hat diese Hürden abgebaut, wodurch neue Marktchancen und eine wettbewerbsfähigere Wirtschaftsregion entstanden sind.</p>
+            <!-- Display positive treatment content here -->
+        {% elif ass_treatment == 'negative_diagnostic' %}
+            <p> Vor Mercosur waren die wirtschaftlichen Rahmenbedingungen unausgeglichen, was zu ungleichem Wettbewerb und wachsenden Abhängigkeiten führte. Dies belastete insbesondere kleinere Volkswirtschaften und verschärfte wirtschaftliche Ungleichheiten. Das Abkommen hat diese Probleme verstärkt, wodurch einseitige Vorteile und nachhaltige Wettbewerbsnachteile entstanden sind.</p>
+            <!-- Display neutral treatment content here -->
+        {% elif ass_treatment == 'positive_prognostic' %}
+            <p> Das Mercosur-Abkommen schafft eine stabile Grundlage für wirtschaftliches Wachstum. Durch faire Handelsregelungen und gezielte Unterstützung können lokale Industrien gestärkt werden. Dies fördert nachhaltige Entwicklung, wirtschaftliche Stabilität und bessere Lebensstandards in der gesamten Region.</p>
+            <!-- Display negative treatment content here -->
+        {% elif ass_treatment == 'negative_prognostic' %}
+            <p> Das Mercosur-Abkommen birgt das Risiko wirtschaftlicher Instabilität. Durch ungleiche Handelsbedingungen und fehlende Schutzmaßnahmen könnten lokale Industrien geschwächt werden. Dies könnte zu anhaltenden Abhängigkeiten, steigendem wirtschaftlichen Druck und sozialen Spannungen in der gesamten Region führen.
+            </p>
+            <!-- Display negative treatment content here -->
         {% else %}
             <p>There was an error in assigning your treatment. We are very sorry.</p>
         {% endif %}

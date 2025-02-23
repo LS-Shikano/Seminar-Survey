@@ -19,14 +19,21 @@ class Welcome(Page):
 class PreTreatment(Page):
     form_model = Player
     form_fields = ['eco_poli_affiliation', 
-                   'soci_poli_affiliation', 
-                   'concept_freetrade', 
+                   'soci_poli_affiliation']
+    
+
+class PreTreatment2(Page):
+    form_model = Player
+    form_fields = ['concept_freetrade', 
                    'mercosur_freetrade', 
                    'supportive_freetrade',
                    'political_stance_trade', 
                    'trust_institutions', 
-                   'interest_politics',
-                   'pre_talk_friends',
+                   'interest_politics']
+    
+class PreTreatment3(Page):
+    form_model = Player
+    form_fields = ['pre_talk_friends',
                    'pre_share_socialmedia',
                    'pre_consider_voting',
                    'pre_support_petition',
@@ -36,24 +43,20 @@ class PreTreatment(Page):
                    'pre_contact_politics',
                    'pre_boycott']
 
-    def before_next_page(self):
-        # List of available treatments
-        treatments = ['positive_prognostic', 
-                      'positive_diagnostic', 
-                      'negativ_prognostic', 
-                      'negative_diagnostic']
-
-        # Assign a random treatment
-        self.participant.vars['assigned_treatment'] = random.choice(treatments)
-        self.player.treatment = self.participant.vars['assigned_treatment']
-
 
 class FramingTreatment(Page):
     form_model = Player
     form_fields = ['time_popout', 'select_proceed']
     
     def vars_for_template(self):
-        return {'treatment': self.participant.vars.get('assigned_treatment')} 
+        treatments = ['positive_prognostic', 
+                'positive_diagnostic', 
+                'negativ_prognostic', 
+                'negative_diagnostic']
+        
+        self.participant.vars['assigned_treatment'] = random.choice(treatments)
+        self.player.treatment = self.participant.vars['assigned_treatment']
+        return {'ass_treatment': self.participant.vars['assigned_treatment']} 
     
 class Bye(Page):
     form_model = Player
@@ -75,17 +78,21 @@ class PostTreatment(Page):
                     'post_legal_action',
                     'post_next_vote',
                     'post_contact_politics',
-                    'post_boycott',
-                    'supportive_mercosur',
+                    'post_boycott']
+    
+class PostTreatment2(Page):
+    form_model = Player
+    form_fields = [ 'supportive_mercosur',
                     'convincing_arguments',
                     'important_mercosur_state',
                     'important_mercosur_you']
 
-
 #Here we define in which ordering we want the pages to be shown. We always start with a Welcome page and end with an End page.
 page_sequence = [Welcome,
                 PreTreatment,
+                PreTreatment2,
                 FramingTreatment,
-                PostTreatment, 
+                PostTreatment,
+                PostTreatment2,
                 ManipulationCheck,
                 Bye]
