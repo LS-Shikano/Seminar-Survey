@@ -15,6 +15,15 @@ class Welcome(Page):
         return {
             "participant_label": self.participant.label
         }   
+    
+    def before_next_page(self):
+        treatments = ['positive_prognostic', 
+                'positive_diagnostic', 
+                'negative_prognostic', 
+                'negative_diagnostic']
+        
+        self.participant.vars['assigned_treatment'] = random.choice(treatments)
+        self.player.treatment = self.participant.vars['assigned_treatment']
 
 class PreTreatment(Page):
     form_model = Player
@@ -49,14 +58,7 @@ class FramingTreatment(Page):
     form_fields = ['time_popout', 'select_proceed']
     
     def vars_for_template(self):
-        treatments = ['positive_prognostic', 
-                'positive_diagnostic', 
-                'negativ_prognostic', 
-                'negative_diagnostic']
-        
-        self.participant.vars['assigned_treatment'] = random.choice(treatments)
-        self.player.treatment = self.participant.vars['assigned_treatment']
-        return {'ass_treatment': self.participant.vars['assigned_treatment']} 
+        return {'ass_treatment': self.player.treatment} 
     
 class Bye(Page):
     form_model = Player
