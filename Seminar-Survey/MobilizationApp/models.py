@@ -30,31 +30,31 @@ class Player(BasePlayer):
     
     # Pre-Treatment 1
     eco_poli_affiliation = models.IntegerField(
-        label="<b>Wie ist Ihre politische Einstellung in wirtschaftlichen Fragen?</b> <i>(1: Links, Umverteilung, Sozialistisch bis 10: Konservativ, offene liberale Märkte)</i>",
+        label="<b>Wie ist Ihre politische Einstellung in wirtschaftlichen Fragen?</b> <i>(1: Mehr Umverteilung, Mehr Regulierung bis 10: Weniger Umverteilung, offene liberale Märkte)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
     soci_poli_affiliation = models.IntegerField(
-        label="<b>Wie ist Ihre politische Einstellung in gesellschaftlichen Fragen?</b> <i>(1: Liberal bezüglich Lebensstile/Kulturen bis 10: Konservativ, traditionelle Familienwerte)</i>",
+        label="<b>Wie ist Ihre politische Einstellung in gesellschaftlichen Fragen?</b> <i>(1: Für offene Lebensstile, Multi-Kulturalismus bis 10: Konservativ, traditionelle Familienwerte)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
     
     # Pre-Treatment 2
     concept_freetrade = models.IntegerField(
-        label="<b>Wie vertraut sind Sie mit dem Konzept von Freihandelsabkommen?</b> <i>(1: Gar nicht vertraut bis 10: Sehr vertraut)</i>",
+        label="<b>Wie gut wissen Sie, was ein Freihandelsabkommen ist??</b> <i>(1: Gar nicht  bis 10: Sehr gut)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
 
     mercosur_freetrade = models.IntegerField(
-        label="<b>Wie vertraut sind Sie mit dem Mercosur-Freihandelsabkommen?</b> <i>(1: Gar nicht vertraut bis 10: Sehr vertraut)</i>",
+        label="<b>Wie gut wissen Sie das Mercosur-Freihandelsabkommen?</b> <i>(1: Gar nicht bis 10: Sehr gut)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
 
     supportive_freetrade = models.IntegerField(
-        label="<b>Wie unterstützend stehen Sie im Allgemeinen Freihandelsabkommen gegenüber?</b> <i>(1:Gar nicht unterstützend bis 10:Sehr unterstützend))</i>",
+        label="<b>Unterstützen Sie im Allgemeinen Freihandelsabkommen?</b> <i>(1:Gar nicht bis 10: Ja, sehr))</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
@@ -70,7 +70,7 @@ class Player(BasePlayer):
     )
 
     trust_institutions = models.IntegerField(
-        label="<b>Wie sehr vertrauen Sie Institutionen (z. B. Regierung, Medien), um faire und genaue Informationen über Handelsabkommen bereitzustellen?</b> <i>(1: Überhaupt nicht bis 10: Vollständig)</i>",
+        label="<b>Vertrauen Sie Institutionen (z. B. Regierung, Medien), um faire und genaue Informationen über Handelsabkommen bereitzustellen?</b> <i>(1: Überhaupt nicht bis 10: Vollständig)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
@@ -83,7 +83,7 @@ class Player(BasePlayer):
 
     ##Pre-Treatment 3
     pre_talk_friends = models.IntegerField(
-        label="• Mit Freunden oder der Familie darüber gesprochen:",
+        label="• Mit Freundinnen, Freunden oder der Familie darüber gesprochen:",
         choices=[
             [1, "Ja"],
             [2, "Nein"],
@@ -242,7 +242,7 @@ class Player(BasePlayer):
     
     ##posttreatment page 2
     supportive_mercosur = models.IntegerField(
-        label="<b>Wie unterstützend stehen Sie nach dem Lesen der Beschreibungen dem Mercosur-Abkommen gegenüber?</b> <i>(1:Gar nicht unterstützend bis 10:Sehr unterstützend))</i>",
+        label="<b>Unterstützen Sie nach dem Lesen der Beschreibungen das Mercosur-Abkommen?</b> <i>(1:Gar nicht bis 10:Ja, sehr))</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
@@ -257,7 +257,7 @@ class Player(BasePlayer):
         #widget=widgets.RadioSelectHorizontal,
     )  
     important_mercosur_you = models.IntegerField(
-        label="<b>Wie wichtig ist das Mercosur-Abkommen für Sie persönlich und für Bürger wie Sie?</b> <i>(1: Nicht wichtig bis 10: Sehr wichtig)</i>",
+        label="<b>Wie wichtig ist das Mercosur-Abkommen für Sie persönlich und für Bürger*innen wie Sie?</b> <i>(1: Nicht wichtig bis 10: Sehr wichtig)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )  
