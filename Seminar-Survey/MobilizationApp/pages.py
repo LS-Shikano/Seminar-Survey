@@ -95,5 +95,4 @@ page_sequence = [Welcome,
                 FramingTreatment,
                 PostTreatment,
                 PostTreatment2,
-                ManipulationCheck,
-                Bye]
+                ManipulationCheck]
