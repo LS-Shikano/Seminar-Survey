@@ -15,15 +15,6 @@ class Welcome(Page):
         return {
             "participant_label": self.participant.label
         }   
-    
-    def before_next_page(self):
-        treatments = ['positive_prognostic', 
-                'positive_diagnostic', 
-                'negative_prognostic', 
-                'negative_diagnostic']
-        
-        self.participant.vars['assigned_treatment'] = random.choice(treatments)
-        self.player.treatment = self.participant.vars['assigned_treatment']
 
 class PreTreatment(Page):
     form_model = Player
