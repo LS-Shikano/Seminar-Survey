@@ -9,8 +9,16 @@ import random
 class Welcome(Page):
     form_model = Player
     form_fields = ['time_start']
-     
+
+    def before_next_page(self):
+        treatments = ['positive_prognostic', 
+                'positive_diagnostic', 
+                'negative_prognostic', 
+                'negative_diagnostic']
         
+        self.participant.vars['assigned_treatment'] = random.choice(treatments)
+        self.player.treatment = self.participant.vars['assigned_treatment']
+     
     def vars_for_template(self):
         return {
             "participant_label": self.participant.label
