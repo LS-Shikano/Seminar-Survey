@@ -2,9 +2,6 @@
 {% load otree static %}
 
 
-{% block title %}
-
-{% endblock %}
 
 {% block scripts%}
     <script>
@@ -84,22 +81,24 @@
 
 {% block content %}
 
-    <hr>
     
     <div class="mediasource">
         <!-- First question -->
-        <p>Was sind Ihre bevorzugten Medienquellen?</p>
-        <input id="socialMedia" type="checkbox" name="mediasource_social" class="mediasource-checkbox"> Soziale Medien
+        <p>Zunächst möchten wir Ihnen einige Fragen zu Ihrer Mediennutzung stellen.</p>
+        <p>Was sind Ihre bevorzugten Medienquellen? (Mehrfachnennungen möglich)</p>
+        <input id="socialMedia" type="checkbox" name="mediasource_social" class="mediasource-checkbox"> Soziale Medien (z.B. Facebook, Twitter, Instagram, LinkedIn)
         <br>
-        <input id="onlineMedia" type="checkbox" name="mediasource_online" class="mediasource-checkbox"> Onlinemedien
+        <input id="onlineMedia" type="checkbox" name="mediasource_online" class="mediasource-checkbox"> Onlinemedien (z.B. Spiegel Online)
         <br>
         <input id="tv" type="checkbox" name="mediasource_tv" class="mediasource-checkbox"> Fernsehen
         <br>
         <input id="radio" type="checkbox" name="mediasource_radio" class="mediasource-checkbox"> Radio
         <br>
-        <input id="printedMedia" type="checkbox" name="mediasource_printed" class="mediasource-checkbox"> Printmedien
+        <input id="printedMedia" type="checkbox" name="mediasource_printed" class="mediasource-checkbox"> Printmedien (z.B. Süddeutsche Zeitung, Die Zeit)
         <br>
         <input id="mediaNone" type="radio" name="mediasource_none" value="1" > Keine der oben genannten
+        <br>
+        <input id="mediaOther" type="checkbox" name="mediasource_other" > Andere: {{ form.mediasource_other }}
     </div>
 
     <div style="margin-bottom: 32px;"></div>
@@ -119,7 +118,7 @@
 
         <!-- Second question - popout section -->
         <div id="divYes" style="display: none">
-            <p>Welche Soziale Medien Plattform nutzen Sie <b>regelmäßig?</b></p>
+            <p>Welche Soziale Medien Plattform nutzen Sie <b>regelmäßig?</b> (Mehrfachnennungen möglich)</p>
             <input id="facebook" type="checkbox" name="socialmedia_facebook" class="socialmedia-checkbox" /> Facebook
             <br>
             <input id="twitter" type="checkbox" name="socialmedia_twitter" class="socialmedia-checkbox" /> X / Twitter
@@ -133,14 +132,15 @@
             <input id="xing" type="checkbox" name="socialmedia_xing" class="socialmedia-checkbox" /> Xing
             <br>
             <input id="socialNone" type="radio" name="socialmedia_none" value="1" /> Keine der oben genannten
-        </div>
+            <br>
+            <input id="socialOther" type="checkbox" name="socialmedia_other" > Andere: {{ form.socialmedia_other }}
     </div>
 
     <div style="margin-bottom: 24px;"></div>
 
     <!-- Next button -->
     <button class="otree-btn-next btn btn-primary next-button otree-next-button">
-        Nächste Seite
+        Weiter
     </button>
 
 {% endblock %}

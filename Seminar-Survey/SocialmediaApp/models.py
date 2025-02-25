@@ -34,10 +34,10 @@ class Player(BasePlayer):
     mediasource_printed = models.BooleanField(widget=CheckboxInput, blank=True)
     mediasource_tv = models.BooleanField(widget=CheckboxInput, blank=True)
     mediasource_radio = models.BooleanField(widget=CheckboxInput, blank=True)
+    mediasource_other = models.StringField(blank=True)
     mediasource_none = models.IntegerField(blank=True)
-    
+
     social_media = models.IntegerField(label='Social Media Question')
-    
     socialmedia_facebook = models.BooleanField(widget=CheckboxInput, blank=True)
     socialmedia_twitter = models.BooleanField(widget=CheckboxInput, blank=True)
     socialmedia_instagram = models.BooleanField(widget=CheckboxInput, blank=True)
@@ -45,11 +45,13 @@ class Player(BasePlayer):
     socialmedia_linkedin = models.BooleanField(widget=CheckboxInput, blank=True)
     socialmedia_xing = models.BooleanField(widget=CheckboxInput, blank=True)
     socialmedia_none = models.IntegerField(blank=True)
+    socialmedia_other = models.StringField(blank=True)
     
     
     #Post-Questions
     post_quest = models.IntegerField(label='End Question', blank=False)
-    
+    post_quest_2 = models.IntegerField(label='End Question', blank=False)
+    post_quest_3 = models.IntegerField(label='End Question', blank=False)
     
     # TweetsPage
     tweet_index = models.IntegerField(initial=0)

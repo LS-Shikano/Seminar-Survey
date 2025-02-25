@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{{ block content }}
+
+<div id="content">
+    <p>
+        Add something here. "Intro to the Survey"
+    </p>
+    <p>
+        Bitte klicken Sie "Weiter".
+    </p>
+
+</div>
+    
+<!-- next button -->
+{{ include 'global/Next_Page_Button.html' }}
+
+<script>
+    window.onload = function () {
+        if (js_vars["link"] != "") {
+            window.location.replace(js_vars["link"]);
+        } else {
+            finish_loading();
+        }
+    }
+</script>
+    
+{{ endblock }}
