@@ -184,6 +184,5 @@ page_sequence = [
     Welcome,
     Page1,
     Transition,
-    Page2,
-    EndPage
+    Page2
 ]
