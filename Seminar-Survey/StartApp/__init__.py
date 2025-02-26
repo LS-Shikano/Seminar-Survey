@@ -75,6 +75,7 @@ class Player(BasePlayer):
 class Welcome(Page):
     name = "welcome"
     form_model = Player
+    #form_fields = ["browser_type", "device_type", "os_system"] #thought this might fix it
 
     @classmethod
     def live_method(cls, player, data):

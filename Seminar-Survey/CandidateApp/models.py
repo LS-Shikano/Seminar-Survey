@@ -181,7 +181,7 @@ class Player(BasePlayer):
     comp_trust = models.IntegerField(
         initial=-99,
         choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5'), (-1, 'Keine Angabe')],
-        label="Wie schätzen Sie die Kompetenz dieser Politikerin ein?"
+        label="Wie kompetent ist diese Politikerin Ihrer Meinung nach?"
     )
     displayed_question = models.StringField(initial='NA')
 

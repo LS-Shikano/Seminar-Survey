@@ -38,22 +38,7 @@ pages = [
 class Player(BasePlayer):
     
     ### Ideology ###
-    left_right_ideology =  models.IntegerField(
-        label="Man spricht in der Politik immer wieder von \"links\" und \"rechts\". Wo würden Sie sich auf einer Skala einordnen, bei der 1 \"links\" bedeutet und 11 \"rechts\"?",
-        choices=[(1, '1'),
-            (2, '2'),
-            (3, '3'),
-            (4, '4'),
-            (5, '5'),
-            (6, '6'),
-            (7, '7'),
-            (8, '8'),
-            (9, '9'),
-            (10, '10'),
-            (11, '11')],
-        widget=widgets.RadioSelectHorizontal,
-        blank=True,
-    )
+    left_right_ideology =  models.IntegerField(blank=True, max=11, min=1, label="")
 
     ### Education ###
     edu_general_education = models.IntegerField(
