@@ -1,5 +1,6 @@
 from otree.api import Currency as c, currency_range, safe_json
 from otree.api import Currency as c, currency_range
+from custom_python.redirecting import ScreenoutPage
 from ._builtin import Page, WaitPage
 from .models import Constants, Player
 from . import *
@@ -59,10 +60,7 @@ class FramingTreatment(Page):
     
     def vars_for_template(self):
         return {'ass_treatment': self.player.treatment} 
-    
-class Bye(Page):
-    form_model = Player
-    form_fields = []
+
     
 
 class ManipulationCheck(Page):

@@ -1,5 +1,6 @@
 from otree.api import Currency as c, currency_range, safe_json
 from ._builtin import Page, WaitPage
+from custom_python.redirecting import ScreenoutPage
 from .models import Constants, Player
 import random
 from datetime import datetime

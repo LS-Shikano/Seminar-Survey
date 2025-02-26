@@ -113,20 +113,5 @@ class Screening(Page):
         player.participant.eligible = player.prep_eligible
         player.participant.gender = player.prep_gender
     
-
-class Survey_Prep(Page):
-    name = "prep"
-
-    @classmethod
-    def js_vars(cls, player) -> dict:
-        label = str(player.participant.label)
-        if player.participant.screen_out:
-            link = player.session.config["screen_out_redirect_link"] + label
-        elif player.participant.quota:
-            link = player.session.config["quota_redirect_link"] + label
-        else:
-            link = ""
-        return super().js_vars(player) | dict(link=link)
     
-    
-page_sequence = [Welcome, Screening, Survey_Prep]
+page_sequence = [Welcome, Screening]
