@@ -30,12 +30,12 @@ class Player(BasePlayer):
     
     # Pre-Treatment 1
     eco_poli_affiliation = models.IntegerField(
-        label="<b>Wie ist Ihre politische Einstellung in wirtschaftlichen Fragen?</b> <i>(1: Mehr Umverteilung, Mehr Regulierung bis 10: Weniger Umverteilung, offene liberale Märkte)</i>",
+        label="<b>Wie ist Ihre politische Einstellung in wirtschaftlichen Fragen?</b> <i>(1: Mehr Umverteilung, Mehr Regulierung der Märkte bis 10: Weniger Umverteilung, offene liberale Märkte)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
     soci_poli_affiliation = models.IntegerField(
-        label="<b>Wie ist Ihre politische Einstellung in gesellschaftlichen Fragen?</b> <i>(1: Für offene Lebensstile, Multi-Kulturalismus bis 10: Konservativ, traditionelle Familienwerte)</i>",
+        label="<b>Wie ist Ihre politische Einstellung in gesellschaftlichen Fragen?</b> <i>(1: Für offene Lebensstile, Multikulturalismus bis 10: Konservativ, traditionelle Familienwerte)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
