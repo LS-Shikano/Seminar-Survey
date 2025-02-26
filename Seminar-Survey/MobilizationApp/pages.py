@@ -93,6 +93,7 @@ class PostTreatment2(Page):
 page_sequence = [Welcome,
                 PreTreatment,
                 PreTreatment2,
+                PreTreatment3,
                 FramingTreatment,
                 PostTreatment,
                 PostTreatment2,

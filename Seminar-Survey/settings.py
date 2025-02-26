@@ -1,7 +1,7 @@
 from os import environ
 import custom_python.get_config as cf
-import warnings
-import os
+import os 
+import warnings 
 
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00,
@@ -18,7 +18,11 @@ SESSION_CONFIGS = [
         name='seminar_survey',
         display_name='Seminar Survey',
         num_demo_participants=10,
-        app_sequence=["StartApp", "SocialmediaApp", "MobilizationApp", "CandidateApp", "EndApp"],
+        app_sequence=["StartApp", 
+                      "SocialmediaApp",
+                      "MobilizationApp",
+                      "CandidateApp", 
+                      "EndApp"],
     ),
 ]
 

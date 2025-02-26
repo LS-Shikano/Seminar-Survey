@@ -75,6 +75,7 @@ class Player(BasePlayer):
 class Welcome(Page):
     name = "welcome"
     form_model = Player
+    #form_fields = ["browser_type", "device_type", "os_system"] #thought this might fix it
 
     @classmethod
     def live_method(cls, player, data):
@@ -129,4 +130,7 @@ class Survey_Prep(Page):
         return super().js_vars(player) | dict(link=link)
     
     
-page_sequence = [Welcome, Screening, Survey_Prep]
+page_sequence = [Welcome, 
+                 Screening, 
+                 #Survey_Prep we can leave this one out i think since there is an intro later after their first questions 
+                 ]
