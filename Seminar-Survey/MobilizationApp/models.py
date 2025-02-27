@@ -42,19 +42,19 @@ class Player(BasePlayer):
     
     # Pre-Treatment 2
     concept_freetrade = models.IntegerField(
-        label="<b>Wie gut wissen Sie, was ein Freihandelsabkommen ist??</b> <i>(1: Gar nicht  bis 10: Sehr gut)</i>",
+        label="<b>Wie vertraut sind Sie mit dem Konzept von Freihandelsabkommen?</b> <i>(1: Gar nicht vertraut bis 10: Sehr vertraut)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
 
     mercosur_freetrade = models.IntegerField(
-        label="<b>Wie gut wissen Sie das Mercosur-Freihandelsabkommen?</b> <i>(1: Gar nicht bis 10: Sehr gut)</i>",
+        label="<b>Wie vertraut sind Sie mit dem Mercosur-Freihandelsabkommen?</b> <i>(1: Gar nicht vertraut bis 10: Sehr vertraut)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
 
     supportive_freetrade = models.IntegerField(
-        label="<b>Unterstützen Sie im Allgemeinen Freihandelsabkommen?</b> <i>(1:Gar nicht bis 10: Ja, sehr))</i>",
+        label="<b>Wie unterstützend stehen Sie im Allgemeinen Freihandel gegenüber?</b> <i>(1:Gar nicht bis 10: Ja, sehr))</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
@@ -186,56 +186,56 @@ class Player(BasePlayer):
     #Wie wahrscheinlich ist es, dass Sie die folgenden Maßnahmen in Bezug auf das Mercosur-Abkommen ergreifen?
     post_talk_friends = models.IntegerField(
         label="• Mit Freunden oder der Familie darüber sprechen:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>" ,
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>" ,
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     post_share_socialmedia = models.IntegerField(
         label="• Ihre Meinung in sozialen Medien teilen:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     ) 
     post_consider_voting = models.IntegerField(
         label="• Die Haltung einer Partei oder eines/er Kandidaten/in bei der Wahl berücksichtigen:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     
     post_support_petition = models.IntegerField(
         label="• Eine Online-Petition unterstützten:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     post_attend_protest = models.IntegerField(
         label="• An einer Demonstration oder einem Protest teilnehmen:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     post_legal_action = models.IntegerField(
         label="• Rechtliche Schritte etwa in Form einer Sammelklage einleiten:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     post_next_vote = models.IntegerField(
         label="• Bei der nächsten nationalen Wahl wählen:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     post_contact_politics = models.IntegerField(
         label="• Einen Politiker/in oder einen offizielles Mitglied der Regierung  kontaktieren:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
     post_boycott = models.IntegerField(
         label="• Bestimmte Produkte boykottieren:",
-         # <i>1:Sehr Unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
+         # <i>1:Sehr unwahrscheinlich bis 10:Sehr wahrscheinlich [zusätzlich 0 „Nicht sicher“]</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal
     )
@@ -252,7 +252,7 @@ class Player(BasePlayer):
         #widget=widgets.RadioSelectHorizontal,
     )
     important_mercosur_state = models.IntegerField(
-        label="<b>Wie wichtig halten Sie das Mercosur-Abkommen für die wirtschaftliche Entwicklung der Mitgliedsstaaten?</b> <i>(1: Nicht wichtig bis 10: Sehr wichtig)</i>",
+        label="<b>Wie wichtig halten Sie das Mercosur-Abkommen für die wirtschaftliche Entwicklung der europäischen Mitgliedsstaaten?</b> <i>(1: Nicht wichtig bis 10: Sehr wichtig)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )  
