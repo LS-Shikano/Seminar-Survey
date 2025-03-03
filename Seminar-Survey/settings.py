@@ -19,9 +19,9 @@ SESSION_CONFIGS = [
         display_name='Seminar Survey',
         num_demo_participants=10,
         app_sequence=["StartApp", 
-                      "SocialmediaApp",
+                      #"SocialmediaApp",
                       "MobilizationApp",
-                      "CandidateApp", 
+                      #"CandidateApp", 
                       "EndApp"],
     ),
 ]
