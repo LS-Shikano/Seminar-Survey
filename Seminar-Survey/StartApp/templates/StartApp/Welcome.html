@@ -1,17 +1,70 @@
 {% extends "global/Page.html" %}
 {% load otree %}
 
+{% block scripts %}
+<script>
+   // Time stamp
+   var time = new Date();
+   var time = time.toISOString();
+   document.getElementById("time").value = time;
+
+    // Catching the device type
+    var ua = navigator.userAgent;
+    var device_type = -999; 
+      if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) device_type = 1; 
+      if (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|we{b)OS|Opera M(obi|ini)/.test(ua)) 
+        device_type = 2; 
+      else device_type = 3; 
+    document.getElementById('device_type').value = device_type; 
+
+    // Catching the operating system
+    var os = -999; 
+        if (ua.indexOf("Win") != -1) os = 1;
+        if (ua.indexOf("Mac") != -1) os = 2;
+        if (ua.indexOf("Linux") != -1) os = 3; 
+        if (ua.indexOf("Android") != -1) os = 4; 
+        if (ua.indexOf("like Mac") != -1) os = 5;
+    document.getElementById('operating_system').value = os;
+
+    // Catching the browser type
+    var browser = -999; 
+      if (ua.match(/chrome|chromium|crios/i)){browser = 1;} 
+      if(ua.match(/firefox|fxios/i)){browser = 2;} 
+      if(ua.match(/safari/i)){browser = 3;} 
+      if(ua.match(/opr\//i)){browser = 4;} 
+      if(ua.match(/edg/i)){browser = 5;} 
+    document.getElementById('browser').value = browser;    
+
+    // Collecting screen width and height
+    var screenWidth = window.innerWidth;
+    var screenHeight = window.innerHeight;
+    document.getElementById('screen_width').value = screenWidth;
+    document.getElementById('screen_height').value = screenHeight;
+</script>
+
+{% endblock %}
+
+
 {{ block custom_content }}
 
 <!-- welcome text -->
 <div class="welcome pt-4 pb-4" id="content"> 
     {{ include 'StartApp/config/html/welcome.html' }}
+
+    <input id="device_type" type="hidden" name="device_type"/>
+    <input id="operating_system" type="hidden" name="operating_system"/>
+    <input id="browser" type="hidden" name="browser"/>
+    <input id="screen_height" type="hidden" name="screen_height"/>
+    <input id="screen_width" type="hidden" name="screen_width"/>
+    <input id="time" type="hidden" name="time_start"/>
 </div>
+
+
 
 <!-- next button -->
 {{ include 'global/Next_Page_Button.html' }}
 
-<script src="https://unpkg.com/bowser@2.11.0/es5.js"></script>
+<!-- <script src="https://unpkg.com/bowser@2.11.0/es5.js"></script>
 <script>
     // tracking browser type
     window.addEventListener('load', function () {
@@ -24,7 +77,7 @@
 
         finish_loading()
     })
-</script>
+</script> -->
 
 <style>
     .welcome {

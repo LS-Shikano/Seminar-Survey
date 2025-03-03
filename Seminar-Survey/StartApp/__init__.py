@@ -1,3 +1,6 @@
+from otree.api import Currency as c, currency_range, safe_json
+from otree.api import Currency as c, currency_range
+from . import *
 from otree.api import (
     Page,
     BaseConstants,
@@ -9,6 +12,7 @@ from otree.api import (
 )
 import custom_python.get_config as cf
 import custom_python.quota_calc as quota
+
 
 doc = """
 StartApp contains a welcome page and a preparation questionnaire.
@@ -66,24 +70,31 @@ class Player(BasePlayer):
         widget=widgets.RadioSelect,
     )
 
-    browser_type = models.StringField(blank=True)
-    device_type = models.StringField(blank=True)
-    os_system = models.StringField(blank=True)
-
+    device_type = models.IntegerField()
+    operating_system = models.IntegerField()
+    browser = models.IntegerField()
+    time_start = models.StringField(initial="-999")
+    screen_width = models.IntegerField()
+    screen_height = models.IntegerField()
 
 # PAGES
 class Welcome(Page):
     name = "welcome"
     form_model = Player
-    #form_fields = ["browser_type", "device_type", "os_system"] #thought this might fix it
+    form_fields = ['time_start', 
+                   'device_type', 
+                   'operating_system', 
+                   'browser',
+                   'screen_width',
+                   'screen_height']
 
-    @classmethod
-    def live_method(cls, player, data):
-        if data.get("browser_type"):
-            player.browser_type = data["browser_type"]
-            player.device_type = data["device_type"]
-            player.os_system = data["os_system"]
-        return super().live_method(player, data)
+    # @classmethod
+    # def live_method(cls, player, data):
+    #     if data.get("browser_type"):
+    #         player.browser_type = data["browser_type"]
+    #         player.device_type = data["device_type"]
+    #         player.os_system = data["os_system"]
+    #     return super().live_method(player, data)
 
 
 class Screening(Page):
