@@ -173,7 +173,7 @@ class Player(BasePlayer):
 
     select_proceed = models.BooleanField(
     blank=False,
-    label="<b>Um zu bestätigen, dass Sie den Text gelesen haben, wählen Sie bitte 'Nein' aus.</b>", #to be changed not a fan of this type of question 
+    label="Um zu bestätigen, dass Sie den Text gelesen haben, wählen Sie bitte 'Nein' aus.*", #to be changed not a fan of this type of question 
     choices=[
         [True, "Ja"],
         [False, "Nein"]
