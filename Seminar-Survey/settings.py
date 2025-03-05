@@ -19,9 +19,9 @@ SESSION_CONFIGS = [
         display_name='Seminar Survey',
         num_demo_participants=10,
         app_sequence=["StartApp", 
-                      #"SocialmediaApp",
+                      "SocialmediaApp",
                       "MobilizationApp",
-                      #"CandidateApp", 
+                      "CandidateApp", 
                       "EndApp"],
     ),
 ]
@@ -56,14 +56,15 @@ SESSION_FIELDS = (
     )
 )
 
+TEMPLATES = [{'APP_DIRS': True}]
+
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
 LANGUAGE_CODE = 'de'
 
 # e.g. EUR, GBP, CNY, JPY
-REAL_WORLD_CURRENCY_CODE = 'EUR'
+REAL_WORLD_CURRENCY_CODE = 'USD'
 USE_POINTS = True
-
 
 ADMIN_USERNAME = "admin"
 # for security, best to set admin password in an environment variable
@@ -115,4 +116,3 @@ else:
         production.""",
         stacklevel=1,
     )
-

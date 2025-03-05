@@ -84,6 +84,7 @@
     
     <div class="mediasource">
         <!-- First question -->
+        {{ include 'StartApp/config/html/mandatory.html' }}
         <p>Zunächst möchten wir Ihnen einige Fragen zu Ihrer Mediennutzung stellen.</p>
         <p>Was sind Ihre bevorzugten Medienquellen? (Mehrfachnennungen möglich)</p>
         <input id="socialMedia" type="checkbox" name="mediasource_social" class="mediasource-checkbox"> Soziale Medien (z.B. Facebook, Twitter, Instagram, LinkedIn)
@@ -105,7 +106,7 @@
 
     <div class="socialmedia">
         <!-- Second question -->
-        <p>Nutzen Sie <b>Soziale Medien?</b></p>
+        <p>Nutzen Sie <b>Soziale Medien?*</b></p>
         <input id="socialYes" type="radio" name="social_media" value="1" onclick="popout()" /> Ja
         <br>
         <input id="socialNo" type="radio" name="social_media" value="2" onclick="popout()" /> Nein

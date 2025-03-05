@@ -38,8 +38,9 @@
     </div>
 
     <div style="margin-bottom: 32px;"></div>
+    {{ include 'StartApp/config/html/mandatory.html' }}
 
-    <p>Ist Ihnen aufgefallen, dass "Community Notes" in einigen Tweets vorhanden war?</p>
+    <p>Ist Ihnen aufgefallen, dass "Community Notes" in einigen Tweets vorhanden war?*</p>
     <input id="postYes" type="radio" name="post_quest" value="1" /> Ja
     <br>
     <input id="postNo" type="radio" name="post_quest" value="2" /> Nein
@@ -48,7 +49,7 @@
     {{ formfield_errors 'post_quest' }}
     <br>
     <br>
-    <p>Haben Sie schon einmal eine "Community Note" gesehen?</p>
+    <p>Haben Sie schon einmal eine "Community Note" gesehen?*</p>
     <input id="CommYes" type="radio" name="post_quest_2" value="1" /> Ja
     <br>
     <input id="CommNo" type="radio" name="post_quest_2" value="2" /> Nein
@@ -57,7 +58,7 @@
     {{ formfield_errors 'post_quest_2' }}
     <br>
     <br>
-    <p>Finden Sie diese Funktion "Community Note" nützlich?</p>
+    <p>Finden Sie diese Funktion "Community Note" nützlich?*</p>
     <input id="funkYes" type="radio" name="post_quest_3" value="1" /> Ja
     <br>
     <input id="funkNo" type="radio" name="post_quest_3" value="2" /> Nein
