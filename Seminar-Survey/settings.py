@@ -19,7 +19,6 @@ SESSION_CONFIGS = [
         display_name='Seminar Survey',
         num_demo_participants=10,
         app_sequence=["StartApp", 
-                      "vignett_app",
                       "SocialmediaApp",
                       "MobilizationApp",
                       "CandidateApp", 
