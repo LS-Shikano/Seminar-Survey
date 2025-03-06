@@ -22,6 +22,7 @@ SESSION_CONFIGS = [
                       "SocialmediaApp",
                       "MobilizationApp",
                       "CandidateApp", 
+                      "vignett_app",  
                       "EndApp"],
     ),
 ]
