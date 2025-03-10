@@ -99,7 +99,9 @@
         <br>
         <input id="mediaNone" type="radio" name="mediasource_none" value="1" > Keine der oben genannten
         <br>
-        <input id="mediaOther" type="checkbox" name="mediasource_other" > Andere: {{ form.mediasource_other }}
+        <input id="mediaOther" type="checkbox" name="mediasource_other_checked">
+        <label for="mediaOther">Andere:</label>
+        {{ form.mediasource_other }}
     </div>
 
     <div style="margin-bottom: 32px;"></div>
@@ -134,7 +136,10 @@
             <br>
             <input id="socialNone" type="radio" name="socialmedia_none" value="1" /> Keine der oben genannten
             <br>
-            <input id="socialOther" type="checkbox" name="socialmedia_other" > Andere: {{ form.socialmedia_other }}
+            <input id="socialOther" type="checkbox" name="socialmedia_other_checked">
+            <label for="socialOther">Andere:</label>
+                {{ form.socialmedia_other }}
+
     </div>
 
     <div style="margin-bottom: 24px;"></div>

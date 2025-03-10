@@ -33,9 +33,9 @@ def load_all_data():
 ## Pages ##
 class PreQuestionsPage(ScreenoutPage):
     form_model = Player
-    form_fields = ['mediasource_social', 'mediasource_online', 'mediasource_printed', 'mediasource_tv', 'mediasource_radio', 'mediasource_none',
+    form_fields = ['mediasource_social', 'mediasource_online', 'mediasource_printed', 'mediasource_tv', 'mediasource_radio', 'mediasource_none', 'mediasource_other_checked',
                    'social_media',
-                   'socialmedia_facebook', 'socialmedia_twitter', 'socialmedia_other', 'socialmedia_instagram', 'socialmedia_tiktok', 'socialmedia_linkedin', 'mediasource_other', 'socialmedia_xing', 'socialmedia_none']
+                   'socialmedia_facebook', 'socialmedia_twitter', 'socialmedia_other', 'socialmedia_instagram', 'socialmedia_tiktok', 'socialmedia_linkedin', 'mediasource_other', 'socialmedia_xing', 'socialmedia_none', 'socialmedia_other_checked']
 
 
 class IntroPage(ScreenoutPage):

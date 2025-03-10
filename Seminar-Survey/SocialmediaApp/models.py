@@ -36,6 +36,7 @@ class Player(BasePlayer):
     mediasource_radio = models.BooleanField(widget=CheckboxInput, blank=True)
     mediasource_other = models.StringField(blank=True)
     mediasource_none = models.IntegerField(blank=True)
+    mediasource_other_checked = models.BooleanField(blank=True)
 
     social_media = models.IntegerField(label='Social Media Question')
     socialmedia_facebook = models.BooleanField(widget=CheckboxInput, blank=True)
@@ -45,6 +46,7 @@ class Player(BasePlayer):
     socialmedia_linkedin = models.BooleanField(widget=CheckboxInput, blank=True)
     socialmedia_xing = models.BooleanField(widget=CheckboxInput, blank=True)
     socialmedia_none = models.IntegerField(blank=True)
+    socialmedia_other_checked = models.BooleanField(blank=True)
     socialmedia_other = models.StringField(blank=True)
     
     
