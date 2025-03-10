@@ -7,3 +7,6 @@ Skeleton Project for Seminar Survey in Otree. PLEASE do not push to the repo on 
 
 Once we are all done, we will merge the versions and make sure it is all compatible and working
 
+
+## Docker Container Deployment
+- Delete databank before deploying

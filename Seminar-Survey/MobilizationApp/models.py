@@ -54,7 +54,7 @@ class Player(BasePlayer):
     )
 
     supportive_freetrade = models.IntegerField(
-        label="<b>Wie unterstützend stehen Sie im Allgemeinen Freihandel gegenüber?*</b> <i>(1:Gar nicht bis 10: Ja, sehr))</i>",
+        label="<b>Wie unterstützend stehen Sie im Allgemeinen Freihandel gegenüber?*</b> <i>(1: Gar nicht bis 10: Ja, sehr))</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
@@ -242,7 +242,7 @@ class Player(BasePlayer):
     
     ##posttreatment page 2
     supportive_mercosur = models.IntegerField(
-        label="<b>Unterstützen Sie nach dem Lesen der Beschreibungen das Mercosur-Abkommen?*</b> <i>(1:Gar nicht bis 10:Ja, sehr)</i>",
+        label="<b>Unterstützen Sie nach dem Lesen der Beschreibungen das Mercosur-Abkommen?*</b> <i>(1: Gar nicht bis 10: Ja, sehr)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )
