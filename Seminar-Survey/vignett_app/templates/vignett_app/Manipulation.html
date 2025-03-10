@@ -1,12 +1,16 @@
 {% extends "global/LanguageVersion_Global.html" %}
 {% load otree static %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
+{% endblock %}
 
 {% block content %}
 <input id="time" type="hidden" name="time_vignett_app" />
 <br>
 <p><i>Bitte lesen Sie den folgenden Text sorgfältig und beantworten Sie die unten stehende Frage.</i></p>
 
+<div class="mb-3 border pt-2 pb-2 px-2">
 <div>
 {{ player.g_age_child }}  berichtete {{ player.g_gender_child }}  Eltern, dass 
 {{ player.g_gender_instructor_mapped_3 }} eines
@@ -46,10 +50,11 @@ verursacht hätten, einzig auf der Grundlage der Aussage eines {{ player.g_age_c
 einigen
 Monaten.
 </div>
+</div>
 
 <br>
-<div class="mb-3 border pt-2 pb-2 px-2">
-    <p > Was denken Sie, nachdem Sie diese Geschichte gelesen haben? Hat {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }} Verhalten gezeigt?</p>
+<div>
+    <p><b> Wie bewerten Sie die Situation, hat {{ player.g_gender_instructor_mapped_3 }} {{ player.g_kind_of_abuse_mapped_4 }} Verhalten gezeigt? </b></p>
     
 
     <div ><input type="radio" name="harassment" value="1"> {{ player.g_gender_instructor_mapped_4 }} hat {{ player.g_kind_of_abuse_mapped_4 }} Verhalten gezeigt.</div>

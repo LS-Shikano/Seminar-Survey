@@ -1,6 +1,10 @@
 {% extends "global/Page.html" %}
 {% load otree %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
+{% endblock %}
+
 {{ block custom_content }}
 
 
@@ -11,7 +15,8 @@
 
 <div id="content">
     <div class="mb-3 border pt-2 pb-2 px-2">
-        <p> Viele Leute verwenden die Begriffe links (1) und rechts (11), wenn es darum geht, unterschiedliche politische Einstellungen zu kennzeichnen. Wenn Sie an Ihre eigenen politischen Ansichten denken, wo würden Sie sich selbst auf dieser Skala einstufen?</p>
+        <p> Viele Leute verwenden die Begriffe links (1) und rechts (11), wenn es darum geht, unterschiedliche politische Einstellungen zu kennzeichnen.</p> 
+        <p>Wenn Sie an Ihre eigenen politischen Ansichten denken, wo würden Sie sich selbst auf dieser Skala einstufen?</p>
     <div class="table">
     <table class="table">
         <thead>

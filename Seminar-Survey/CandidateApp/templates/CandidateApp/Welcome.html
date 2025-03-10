@@ -1,6 +1,9 @@
 {% extends "global/Page.html" %}
 {% load otree static %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
+{% endblock %}
 
 {% block custom_content %}
 <!-- Hidden form fields (not visible to participants) -->
@@ -22,8 +25,9 @@
     Nach diesem Block folgt ein zweiter Abschnitt mit <span style="font-weight: bold; text-decoration: underline;">weiteren 10 Bildern.</span> Auch hier bitten wir Sie,
     jeweils eine spezifische Frage zu den dargestellten Personen zu beantworten.
     Bitte beantworten Sie alle Fragen so ehrlich wie möglich, da Ihre Antworten für die Auswertung von großer Bedeutung sind. 
-    <br> <br>
-    Sobald Sie bereit sind klicken Sie bitte auf den <br><b>"Weiter"</b>-Button.
+    <br> 
+    <br>
+    Sobald Sie bereit sind klicken Sie bitte auf den <b>"Weiter"</b>-Button.
 </p>
 
 <!-- paper for the color selection: https://ieeexplore.ieee.org/abstract/document/6875961-->

@@ -2,6 +2,7 @@
 {% load otree static %}
 
 {% block styles %}
+<link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
 {% endblock %}
 
 {% block scripts %}
@@ -11,7 +12,7 @@
 {% block custom_content %}
 <div class="container">
 
-    <div class="mb-3 bg-light border pt-2 pb-2 px-2">
+    
         <p><b>Haben Sie jemals eine der folgenden Handlungen im Zusammenhang mit einem Handelsthema durchgeführt?</b></p>
         <div class="mb-3 bg-light border pt-2 pb-2 px-2">
             {{ include 'StartApp/config/html/mandatory.html' }}
@@ -25,7 +26,7 @@
             {{formfield 'pre_contact_politics'}}
             {{formfield 'pre_boycott'}}
         </div>
-    </div>
+    
 
 
     <p>Bitte klicken Sie nun auf den "Weiter"-Button, um fortzufahren.</p>

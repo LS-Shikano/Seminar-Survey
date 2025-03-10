@@ -1,6 +1,9 @@
 {% extends "global/Page.html" %}
 {% load otree static %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
+{% endblock %}
 
 {% block custom_content %}
 <p> Vielen Dank für Ihre Bewertung der ersten 10 Bilder!
@@ -10,6 +13,8 @@
     Bitte nehmen Sie sich auch hier die Zeit, jedes Bild genau zu betrachten, und beantworten Sie die Frage so ehrlich wie möglich. <br>
     Sobald Sie bereit sind klicken Sie bitte auf den <b>"Weiter"</b>-Button.
     </p>
+
+    <br>
 
 <!-- Continue Button -->
 <br> 

@@ -1,16 +1,24 @@
 {% extends "global/Page.html" %}
 {% load otree %}
 
+{% block styles %}
+<link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
+{% endblock %}
+
 {{ block custom_content }}
 
 
 
 <!-- questions -->
 <div id="content">
+    <div class="mb-3 bg-light border pt-2 pb-2 px-2">
     {{ formfield "edu_general_education"}}
     {{ formfield "edu_general_education_open" }}
+    </div>
+    <div class="mb-3 bg-light border pt-2 pb-2 px-2">
     {{ formfield "edu_vocational_training" }}
     {{ formfield "edu_vocational_training_open" }}
+    </div>
 </div>
 
 <!-- next button -->
