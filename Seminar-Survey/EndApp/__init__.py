@@ -64,6 +64,8 @@ class Player(BasePlayer):
         blank=True,
     )
 
+    time_end = models.StringField(initial="-999")
+
 # PAGES
 
 ### Ideology ###
@@ -99,6 +101,7 @@ class Income(Page):
 class End(Page):
     name = "end"
     form_model = Player
+    form_fields = ["time_end"]
 
     @classmethod
     def before_next_page(cls, player, timeout_happened):

@@ -76,7 +76,7 @@ class Player(BasePlayer):
     )
 
     interest_politics = models.IntegerField(
-        label="<b>Wie interessiert sind Sie im Allgemeinen an Politik?*</b> <i>(1:Sehr interessiert bis 10:Gar nicht interessiert)</i>",
+        label="<b>Wie interessiert sind Sie im Allgemeinen an Politik?*</b> <i>(1: Sehr interessiert bis 10: Gar nicht interessiert)</i>",
         choices=[(i, str(i)) for i in range(1, 11)],
         #widget=widgets.RadioSelectHorizontal,
     )

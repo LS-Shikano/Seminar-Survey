@@ -5,6 +5,15 @@
 <link rel="stylesheet" href="{{ static 'stylesheet.css' }}">
 {% endblock %}
 
+{% block scripts %}
+<script>
+   // Time stamp
+   var time = new Date();
+   var time = time.toISOString();
+   document.getElementById("time").value = time;
+</script>
+{% endblock %}
+
 {{ block custom_content }}
 
 <!-- end text -->
@@ -15,6 +24,8 @@
         {{ include 'EndApp/config/html/end.html' }}
     {{ endif }}
 </div>
+
+<input id="time" type="hidden" name="time_end"/>
 
 <!-- send button -->
 {{ include 'global/Send_Button.html' }}

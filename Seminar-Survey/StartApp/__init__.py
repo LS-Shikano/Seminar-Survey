@@ -74,6 +74,7 @@ class Player(BasePlayer):
     operating_system = models.IntegerField()
     browser = models.IntegerField()
     time_start = models.StringField(initial="-999")
+    
     screen_width = models.IntegerField()
     screen_height = models.IntegerField()
 
