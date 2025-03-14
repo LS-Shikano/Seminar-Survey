@@ -7,9 +7,9 @@ SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00,
     participation_fee=0.00,
     doc="",
-    normal_redirect_link="https://mingle.respondi.com/s/1608318/ospe.php3?c_0002=1&return_tic=",
-    screen_out_redirect_link="https://survey.maximiles.com/screenout?p=89808_546de779&m=",
-    quota_redirect_link="https://survey.maximiles.com/quotasfull?p=89808_d7bfcc1a&m=",
+    normal_redirect_link="https://survey.maximiles.com/complete?p=143662_3e67659f&m=",
+    screen_out_redirect_link="https://survey.maximiles.com/screenout?p=143662_17d97834&m=",
+    quota_redirect_link="https://survey.maximiles.com/quotasfull?p=143662_ee5ba467&m=",
     quota_screenout=True,
 )
 
