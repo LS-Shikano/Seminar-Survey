@@ -108,11 +108,6 @@ class End(Page):
     form_model = Player
     form_fields = ["time_end"]
 
-    @classmethod
-    def before_next_page(cls, player, timeout_happened):
-        # Having finished the survey, the player is counted towards the quota
-        quota.counting(player)
-
 
 class Redirect(Page):
     form_model = Player
