@@ -108,9 +108,6 @@ class End(Page):
     form_model = Player
     form_fields = ["time_end"]
 
-
-class Redirect(Page):
-    form_model = Player
     @staticmethod
     def is_displayed(player):
         return player.session.config["quota_screenout"]
@@ -123,6 +120,8 @@ class Redirect(Page):
             + str(player.participant.label),
         )
 
+class Redirect(Page):
+    form_model = Player
 
 page_sequence = [
     Ideology,
