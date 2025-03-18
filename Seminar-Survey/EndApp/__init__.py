@@ -95,6 +95,11 @@ class Income(Page):
     name = "income"
     form_model = Player
     form_fields = ["income_net_income"]
+    
+    @classmethod
+    def before_next_page(cls, player, timeout_happened):
+        # Having finished the survey, the player is counted towards the quota
+        quota.counting(player)
 
 
 ### End_Page ###
